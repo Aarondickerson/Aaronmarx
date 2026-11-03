@@ -4,8 +4,9 @@ services:
   - type: web
     name: aaron-dickerson-portfolio
     runtime: static
-    # No build step — the site is plain HTML/CSS/JS.
-    buildCommand: ""
+    # No real build — the site is plain HTML/CSS/JS. Harmless no-op so Render
+    # never tries to auto-detect a build step.
+    buildCommand: echo "static site - nothing to build"
     # Serve everything from the repo root.
     staticPublishPath: .
     # Long cache for images/fonts; HTML stays fresh.
