@@ -92,7 +92,9 @@
   var file = (location.pathname.split("/").pop() || "index.html").toLowerCase();
   var inCase = PREFIX === "../";
   var greeting;
-  if (inCase) {
+  if (inCase && document.querySelector(".lockbox")) {
+    greeting = { pose: "think", text: "This one's private \ud83d\udd12 Pop in the password to see it." };
+  } else if (inCase) {
     var h1 = document.querySelector(".display, h1");
     greeting = { pose: "point", text: "Want the story behind <b>" + (h1 ? h1.textContent.trim().split("\n")[0] : "this project") + "</b>? Scroll on." };
   } else if (file.indexOf("work") === 0) {
