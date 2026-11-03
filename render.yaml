@@ -1,0 +1,16 @@
+# Render Blueprint — static portfolio site
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: aaron-dickerson-portfolio
+    runtime: static
+    # No build step — the site is plain HTML/CSS/JS.
+    buildCommand: ""
+    # Serve everything from the repo root.
+    staticPublishPath: .
+    # Long cache for images/fonts; HTML stays fresh.
+    headers:
+      - path: /images/*
+        name: Cache-Control
+        value: public, max-age=86400
+    pullRequestPreviewsEnabled: false

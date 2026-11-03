@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-theme="day">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moveness — Aaron Dickerson</title>
+  <meta name="description" content="Moveness is a local movement platform — a neighborhood fitness directory made trustworthy by content. Product strategy, brand, flows, and a functional build by Aaron Dickerson." />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/site.css?v=8" />
+</head>
+<body>
+  <header class="site-head">
+    <div class="brand"><a href="../index.html">Aaron Dickerson</a> <span>— Product Design</span></div>
+    <nav class="head-mid">
+      <a href="../index.html">Work</a><a href="../work.html">Index</a><a href="../about.html">Profile</a><a href="../contact.html">Contact</a>
+    </nav>
+    <div class="head-right"><span class="clock">—</span><button class="theme-toggle" aria-label="Toggle day / night"></button></div>
+  </header>
+
+  <main>
+    <section class="case-head">
+      <span class="eyebrow">Own product · 0→1</span>
+      <h1 class="display">Moveness</h1>
+      <p class="lead" style="margin-top:26px;">A local movement platform — the neighborhood fitness directory made trustworthy by the people in it. "Find your fit. Move well." I own the whole thing: strategy, product definition, brand, flows, and a working build.</p>
+      <div class="case-metae">
+        <div><div class="k">Role</div><div class="v">Founder · principal product designer</div></div>
+        <div><div class="k">Year</div><div class="v">2026 · ongoing</div></div>
+        <div><div class="k">Pilot</div><div class="v">Northeast Houston corridor</div></div>
+        <div><div class="k">Surface</div><div class="v">Mobile-web PWA + Next.js build</div></div>
+      </div>
+    </section>
+
+    <div class="cover-hero"><div class="frame"><img src="../images/projects/moveness/cover.jpg" alt="Moveness brand foundation" /></div></div>
+
+    <article class="prose">
+      <section class="tldr">
+        <span class="eyebrow">TL;DR</span>
+        <ul>
+          <li>Moveness is a people-led local directory of gyms, studios, and recovery — a feed that resolves to real places and activities you can act on.</li>
+          <li>The hard part of choosing a fitness home is trust, and generic directories don't earn it; Moveness makes the directory trustworthy by connecting it to content from real people and venues.</li>
+          <li>I defined the product end to end — strategy, a ten-plus-version PRD, user journeys, happy-path wireframes, a full brand system, and a functional Next.js app.</li>
+          <li>The core rule is a <em>content-to-action contract</em>: a post has to resolve to something in the Moveness graph, or it doesn't publish.</li>
+          <li>Pre-launch and honest about it: demand-side research hasn't run yet, so the personas and targets are hypotheses. <span class="needs">Pre-launch</span> Measurement plan below.</li>
+        </ul>
+      </section>
+
+      <h2>Project overview</h2>
+      <p>Moveness is a local movement platform piloting in the Northeast Houston corridor (Kingwood, Humble, Porter, New Caney). The primary surface is a mobile-web progressive web app, alongside a functional build. It is structured as a three-layer flywheel — content brings people in, a neighborhood directory is the substance, and actions (visits, day passes, check-ins) are the payoff — with the brand line <em>Find your fit. Move well.</em></p>
+
+      <h2>The problem</h2>
+      <p>Finding the right place to train is a high-friction, low-trust decision. A ranked list or a map of gyms answers "what's near me" but not "who's actually moving here and would I belong." Generic directories end at a decision and never convert interest into action; social apps create belonging but don't resolve to a real place you can walk into. Moveness is the attempt to hold both — community that makes a directory trustworthy, and a directory that makes community actionable.</p>
+
+      <h2>Users &amp; research</h2>
+      <p>The pilot serves people choosing a fitness home in a four-suburb corridor, plus the gyms, studios, and recovery businesses that want to be found. I grounded the supply side in real market and business analysis (the Northeast Houston fitness market, gym and recovery-center economics) and wrote a member research plan.</p>
+      <div class="callout"><strong>I'm honest in the PRD about what isn't done:</strong> the demand-side member research hasn't run, so the personas and targets are pre-research hypotheses. The largest untested assumption is whether ~25 people worth following live within a twenty-minute drive of each other and will post for free — and that belongs answered before the build, not after.</div>
+
+      <h2>Strategy &amp; approach</h2>
+      <p>The strategy went through real, documented evolution across versions of the PRD — from a comparison marketplace, to a people-led feed, to a local directory made trustworthy by content. Two decisions anchor it:</p>
+      <ul>
+        <li><strong>The content-to-action contract.</strong> Content must resolve to an entity in the graph — a venue, activity, goal, challenge, crew, event, or creator — or it doesn't publish. The differentiator was never venue attachment; it was <em>resolvability</em>.</li>
+        <li><strong>Seven pillars as product structure</strong> — Train, Fuel, Recover, Mind, Life, Journey, Community — each with a declared topic, supply source, and safety class, because health-adjacent content needs gating from day one.</li>
+      </ul>
+      <p>Onboarding was cut from eleven steps to five in about ninety seconds, ending in a populated feed, with removed questions relocated to the moment each one actually changes something.</p>
+
+      <h2>Design process</h2>
+      <h3>Product definition</h3>
+      <p>I wrote the PRD through many revisions, logging every consequential decision with its rationale and its effect on the risk profile — the kind of trail that keeps a 0→1 product honest with itself. It's paired with user-journey documents and a wireframe set deliberately kept greyscale ("ten screens, greyscale on purpose") so the structure could be judged before the skin.</p>
+      <h3>Brand</h3>
+      <p>Moveness has a full brand foundation — name, voice, a lime-on-ink palette, an athletic geometric wordmark, app icons, and real-world applications — expressed in a brand system deck and a mobile UI moodboard.</p>
+      <h3>Build</h3>
+      <p>It isn't just a deck: there's a functional Next.js application alongside the static prototype, so the concept can be used, not only reviewed.</p>
+
+      <h2>Validation &amp; iteration</h2>
+      <p>Iteration so far has been structural — each PRD version resolves open decisions and re-states what it does to the risk profile rather than quietly absorbing changes. <span class="needs">Pre-launch</span> The real validation — the member study and a live pilot — is the next phase, gated (by my own launch criteria) on content supply holding for four consecutive weeks before any public launch.</p>
+
+      <h2>Outcome &amp; impact — how I'd measure it</h2>
+      <p>No live metrics yet, by design. The flywheel defines what to measure:</p>
+      <ul>
+        <li><strong>Attach-through</strong> — share of attachable posts whose action is tapped.</li>
+        <li><strong>Action rate</strong> — step 2 → step 3 of the flywheel, where this category of product usually fails.</li>
+        <li><strong>Confident decisions</strong> — people who choose a fitness home and act.</li>
+        <li><strong>Supply health</strong> — weekly posts across the pillar mix, from venues and creators.</li>
+      </ul>
+
+      <h2>What I'd do next · Reflections</h2>
+      <p>Run the demand-side research before building further — the discipline I'd demand of any team applies hardest to my own idea. Moveness is the project where I get to be fully accountable for the product thesis, not just the screens: every decision has a logged rationale and a stated risk, and the hardest ones (will people post for free, can a directory stay trustworthy as content widens, how to keep health content safe) are named rather than hidden. That's the standard I want to bring to any team.</p>
+    </article>
+
+    <section class="gallery-wrap">
+      <div class="g-head"><span class="eyebrow">Brand, journeys &amp; wireframes</span><span class="hint" style="color:var(--muted);font-size:13px;">Strategy → brand system</span></div>
+      <div class="gallery">
+        <figure><img src="../images/projects/moveness/moodboard.png" alt="Mobile UI moodboard" /><figcaption><span class="k lo">Moodboard</span>Mobile UI moodboard setting the visual direction.</figcaption></figure>
+        <figure><img src="../images/projects/moveness/user-journey.png" alt="User journey happy path" /><figcaption><span class="k lo">Journey</span>Happy-path user journey.</figcaption></figure>
+        <figure><img src="../images/projects/moveness/wireframes.png" alt="Happy path wireframes" /><figcaption><span class="k lo">Wireframe</span>"Ten screens, greyscale on purpose" — the happy path.</figcaption></figure>
+        <figure><img src="../images/projects/moveness/brand-foundation.png" alt="Brand foundation" /><figcaption><span class="k hi">Brand</span>The Moveness brand foundation — voice, palette, naming.</figcaption></figure>
+        <figure><img src="../images/projects/moveness/contact-sheet.png" alt="Brand contact sheet" /><figcaption><span class="k hi">Brand</span>Mark and logo system contact sheet.</figcaption></figure>
+        <figure><img src="../images/projects/moveness/lockup.png" alt="Moveness lockup" /><figcaption><span class="k hi">Identity</span>Two-tone lockup.</figcaption></figure>
+        <figure><img src="../images/projects/moveness/feed.jpg" alt="Moveness feed imagery" /><figcaption><span class="k lo">Imagery</span>Real-rooms, real-people feed imagery.</figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <nav class="project-nav">
+    <a class="prev" href="deal-registration.html"><span class="np-label">← Previous</span><span class="np-title">Deal Registration</span></a>
+    <a class="next" href="wabi2b.html"><span class="np-label">Next →</span><span class="np-title">Wabi2b</span></a>
+  </nav>
+  <footer class="foot"><span>© 2026 Aaron Dickerson</span><span>dickersoam@gmail.com · 469-955-8399</span></footer>
+  <script src="../js/site.js?v=8"></script>
+</body>
+</html>

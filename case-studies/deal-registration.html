@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" data-theme="day">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deal Registration — Aaron Dickerson</title>
+  <meta name="description" content="Reimagining Cisco Commerce deal registration — an AI-first concept that collapses a click-heavy quoting flow and surfaces policy conflicts before they stall a deal." />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/site.css?v=8" />
+</head>
+<body>
+  <header class="site-head">
+    <div class="brand"><a href="../index.html">Aaron Dickerson</a> <span>— Product Design</span></div>
+    <nav class="head-mid">
+      <a href="../index.html">Work</a><a href="../work.html">Index</a><a href="../about.html">Profile</a><a href="../contact.html">Contact</a>
+    </nav>
+    <div class="head-right"><span class="clock">—</span><button class="theme-toggle" aria-label="Toggle day / night"></button></div>
+  </header>
+
+  <main>
+    <section class="case-head">
+      <span class="eyebrow">Cisco Commerce · Concept, not a launch</span>
+      <h1 class="display">Deal Registration</h1>
+      <p class="lead" style="margin-top:26px;">Registering and quoting a deal in Cisco Commerce is click-heavy, and policy problems show up too late to fix cheaply. I reframed it as an AI-first flow that turns a sales conversation into a quote — and catches discount and eligibility conflicts before they stall.</p>
+      <div class="case-metae">
+        <div><div class="k">Client</div><div class="v">Cisco · Commerce (CCW)</div></div>
+        <div><div class="k">Year</div><div class="v">2026</div></div>
+        <div><div class="k">Role</div><div class="v">Senior product designer — research, strategy, UI</div></div>
+        <div><div class="k">Users</div><div class="v">Partners, distributors, sellers, approvers</div></div>
+      </div>
+    </section>
+
+    <div class="cover-hero"><div class="frame"><img src="../images/projects/deal-reg/cover.jpg" alt="Reimagined Cisco Commerce AI assistant" /></div></div>
+
+    <article class="prose">
+      <section class="tldr">
+        <span class="eyebrow">TL;DR</span>
+        <ul>
+          <li>Deal creation takes ~6 clicks through unfamiliar fields; approvals stall; and discount/eligibility conflicts surface only at the end, causing rework.</li>
+          <li>I analyzed real partner and seller feedback (GPRS &amp; Partner Case Management) across ~25 feature areas and a 151-slide current-state walkthrough covering every deal type.</li>
+          <li>I produced the UX deliverables — problem statements, personas, current-state journeys, task flows, a heuristic evaluation, and a competitive benchmark (HubSpot, Salesforce CPQ, DealHub).</li>
+          <li>The reimagined concept is AI-first: an assistant that drafts a quote from a meeting summary, recommends configurations, shows estimated savings, and raises DDP/overlap and eligibility conflicts early.</li>
+          <li>This is a validated concept and stakeholder deliverable set — <span class="needs">not launched</span>; no measured outcomes yet. Measurement plan below.</li>
+        </ul>
+      </section>
+
+      <h2>Project overview</h2>
+      <p>Cisco Commerce deal registration covers deal creation and quoting for partners, distributors, and sellers across many deal types — Regular (with and without a bill of materials), Quick Quote, Buying Program, Global/GPN, EAMP, Splunk Deal Reg, and Teaming. The initiative set out to reduce friction, clarify incentives and approvals, and handle discount and policy logic better — grounded in real partner and seller feedback. Tools: Figma, Figma Make, Cursor with MCP, OpenSpec, Jira (project ACOE), and Miro.</p>
+
+      <h2>The problem</h2>
+      <p>The pain was documented, not guessed. From partner case management and survey feedback, eight problems recurred:</p>
+      <ul>
+        <li><strong>Deal creation is too click-heavy</strong> — a quote takes ~6 clicks through unfamiliar fields like <em>Intended Use</em>, <em>Price List</em>, and <em>Buy Method</em>.</li>
+        <li><strong>Incentive approval is unclear</strong> — partners can't tell what auto-approves vs. needs manual review, causing SLA surprises.</li>
+        <li><strong>Approvals stall</strong> with no way to follow up, so people resort to manual pings.</li>
+        <li><strong>Justification loops</strong> trigger "More Info Required" cycles and rework.</li>
+        <li><strong>Quote changes are opaque</strong> — you can't see why approved incentives were dropped.</li>
+        <li><strong>Discount policy (overlap / DDP) surfaces too late</strong> to resolve cheaply.</li>
+        <li><strong>Eligibility errors appear late</strong>, often only at order conversion.</li>
+        <li><strong>Configuration errors are confusing</strong>, referencing raw SKUs and invalid suggestions.</li>
+      </ul>
+
+      <h2>Users &amp; research</h2>
+      <p>The experience serves distinct personas with different stakes: Partner/Reseller, Distributor, Account Manager (seller), NS Approver (Sales Empowered / DDA), Partner Account Manager, and Global Account Manager. I built the research base from two primary sources — a pain-points dataset spanning ~25 feature areas, and a 151-slide current-state deck documenting the real flows for every deal type — supplemented by prior CCW ethnographic research and a heuristic evaluation of the current product. I then benchmarked against HubSpot, Salesforce CPQ, and DealHub to see how comparable tools handle quoting, approvals, and policy.</p>
+
+      <h2>Strategy &amp; approach</h2>
+      <p>Two bets drove the direction. First, <strong>collapse the mechanics</strong>: get deal creation to no more than two primary actions, aligned to the Order experience, with in-context help on the fields that confuse people. Second, <strong>move the hard checks earlier</strong>: catch DDP/overlap, eligibility, and configuration problems while there's still a cheap moment to fix them, not at submit or order conversion. An AI assistant became the natural front door for both — it can turn intent into a draft and run the checks in the background.</p>
+
+      <h2>Design process</h2>
+      <h3>Deliverables</h3>
+      <p>I produced the stakeholder-facing UX set, numbered to mirror the standard workflow: a PRD and requirements, problem statements with acceptance criteria, personas, current-state journeys, task flows, a heuristic evaluation, and a research/competitive benchmark — plus a draft Jira backlog (a parent feature anchoring child stories) for dev handoff.</p>
+      <h3>The reimagined concept</h3>
+      <p>The prototype recasts Commerce around an AI assistant. The home asks "How can I help today?" with starting prompts (build a quote, show renewals, surface security offers) and a free-text field. A seller can paste a meeting summary — "we discussed a Zero Trust rebuild, DUO, Umbrella SIG, Secure Firewall…" — and the assistant identifies opportunities, recommends configurations, and shows an estimated-savings view before anyone touches a form. Discount-policy conflicts and eligibility checks are raised inline, early, with an acknowledge-and-proceed path for the account manager and visibility for the approver.</p>
+
+      <h2>Validation &amp; iteration</h2>
+      <p>The concept was reviewed with stakeholders and expressed as a clickable prototype and requirements-to-coverage map so each documented pain point could be traced to a screen. <span class="needs">Not launched</span> There is no measured change in quoting time or approval SLA yet — the next step is to put the concept in front of partners and sellers and instrument it.</p>
+
+      <h2>Outcome &amp; impact — how I'd measure it</h2>
+      <p>I'm not attaching business metrics to an unlaunched concept. If built, these are the measures that matter:</p>
+      <ul>
+        <li>Clicks and time to create a quote vs. the current ~6-click baseline.</li>
+        <li>Share of deals where DDP/overlap or eligibility conflicts are caught before submit.</li>
+        <li>Approval SLA and the rate of "More Info Required" justification loops.</li>
+        <li>Quote-to-order conversion without late eligibility failures.</li>
+      </ul>
+
+      <h2>What I'd do next · Reflections</h2>
+      <p>Deal registration is the sibling of my Commerce on Mobile work, and the lesson rhymes: the fastest wins come from moving a decision — or a policy check — to the moment it's cheap, and from refusing complexity the data doesn't justify. The AI framing is only as good as the guardrails around it, so the next step is testing whether sellers trust an assistant-drafted quote enough to send it, and whether early conflict warnings actually reduce rework rather than just moving it.</p>
+    </article>
+
+    <section class="gallery-wrap">
+      <div class="g-head"><span class="eyebrow">Research &amp; reimagined screens</span><span class="hint" style="color:var(--muted);font-size:13px;">Analysis → AI-first concept</span></div>
+      <div class="gallery">
+        <figure><img src="../images/projects/deal-reg/research.png" alt="Research study" /><figcaption><span class="k lo">Research</span>Research study grounding the redesign in partner/seller feedback.</figcaption></figure>
+        <figure><img src="../images/projects/deal-reg/screen-02.png" alt="AI assistant home" /><figcaption><span class="k hi">Hi-fi</span>AI assistant home — intent in, draft out.</figcaption></figure>
+        <figure><img src="../images/projects/deal-reg/screen-01.png" alt="Welcome to Cisco Commerce" /><figcaption><span class="k hi">Hi-fi</span>Reimagined Commerce entry.</figcaption></figure>
+        <figure><img src="../images/projects/deal-reg/screen-03.png" alt="Estimated savings" /><figcaption><span class="k hi">Hi-fi</span>Estimated savings surfaced before the form.</figcaption></figure>
+        <figure><img src="../images/projects/deal-reg/screen-04.png" alt="Recommended configuration" /><figcaption><span class="k hi">Hi-fi</span>Recommended configuration from the opportunity.</figcaption></figure>
+        <figure><img src="../images/projects/deal-reg/screen-05.png" alt="Recommendations table" /><figcaption><span class="k hi">Hi-fi</span>Opportunity recommendations and offers.</figcaption></figure>
+        <figure><img src="../images/projects/deal-reg/screen-06.png" alt="Quote detail" /><figcaption><span class="k hi">Hi-fi</span>Quote detail with early policy checks.</figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <nav class="project-nav">
+    <a class="prev" href="commerce-mobile.html"><span class="np-label">← Previous</span><span class="np-title">Commerce on Mobile</span></a>
+    <a class="next" href="moveness.html"><span class="np-label">Next →</span><span class="np-title">Moveness</span></a>
+  </nav>
+  <footer class="foot"><span>© 2026 Aaron Dickerson</span><span>dickersoam@gmail.com · 469-955-8399</span></footer>
+  <script src="../js/site.js?v=8"></script>
+</body>
+</html>

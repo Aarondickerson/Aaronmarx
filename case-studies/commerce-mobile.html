@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" data-theme="day">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Commerce on Mobile — Aaron Dickerson</title>
+  <meta name="description" content="A validated mobile commerce concept for Cisco sellers — and the research that stopped a discount model before it shipped." />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/site.css?v=8" />
+</head>
+<body>
+  <header class="site-head">
+    <div class="brand"><a href="../index.html">Aaron Dickerson</a> <span>— Product Design</span></div>
+    <nav class="head-mid">
+      <a href="../index.html">Work</a>
+      <a href="../work.html">Index</a>
+      <a href="../about.html">Profile</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="head-right">
+      <span class="clock">—</span>
+      <button class="theme-toggle" aria-label="Toggle day / night"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-head">
+      <span class="eyebrow">Cisco Commerce · Concept, not a launch</span>
+      <h1 class="display">Commerce on Mobile</h1>
+      <p class="lead" style="margin-top:26px;">Sellers were closing the quarter from a phone that could not really run Commerce. I turned one stakeholder's story into a working concept — and research stopped a discount model before anyone built it.</p>
+      <div class="case-metae">
+        <div><div class="k">Client</div><div class="v">Cisco · Enterprise B2B commerce</div></div>
+        <div><div class="k">Year</div><div class="v">2025–2026 · ~10 weeks</div></div>
+        <div><div class="k">Role</div><div class="v">Product design — framing, flows, UI, prototype</div></div>
+        <div><div class="k">Partner</div><div class="v">Mike Hall (design)</div></div>
+      </div>
+    </section>
+
+    <div class="cover-hero">
+      <div class="frame"><img src="../images/projects/commerce-mobile/hero.jpg?v=2" alt="Commerce on Mobile v4 — home, quote details, and bill of materials" /></div>
+    </div>
+
+    <article class="prose">
+      <section class="tldr">
+        <span class="eyebrow">TL;DR</span>
+        <ul>
+          <li>Cisco Commerce (CCW) on a phone was the desktop site, pinched and zoomed.</li>
+          <li>The people served were sellers and approvers who review deals away from a desk, often at quarter-end.</li>
+          <li>With Mike Hall, I framed the problem, ran the design, and produced a clickable prototype of four on-the-go tasks.</li>
+          <li>~90% of sessions start with a deal ID already in hand, so search moved to the top of Home.</li>
+          <li>Category-level discounting was the popular plan. Research showed it mis-priced real bills of materials and could create legal exposure. We changed it to line-level editing <em>before</em> development.</li>
+        </ul>
+      </section>
+
+      <p><strong>Prototypes:</strong>
+        <a href="https://dickersoam.github.io/commerce-mobile-prototype/" target="_blank" rel="noopener">Public demo</a> ·
+        <a href="https://wwwin-github.cisco.com/pages/aadicker/Commerce-Mobile/v4/" target="_blank" rel="noopener">v4 (Cisco VPN)</a>
+      </p>
+
+      <h2>Project overview</h2>
+      <p>A Cisco Commerce mobile concept for deal and quote review. No requirements document at the start, no mobile design library to drop in, and a short window before a Global Sales Experience (GSX) demo. A clickable concept existed within the first three weeks; a hi-fi prototype followed. Tools: Figma, Figma Make, Cursor with MCP, GitHub, Jira, Miro, OpenSpec, and the OCDL / Magnetic component library.</p>
+
+      <h2>The problem</h2>
+      <p>Cisco Commerce does not work well on a phone. Sellers who need to review and approve deals away from their desks use the desktop site in a mobile browser — it is slow, and mistakes are easy. That matters at quarter-end, when an approval deferred until someone is back at a laptop is revenue <em>timing</em>, not a polish issue. That revenue loss has not been measured; the cost we could point to was time — mis-taps, rotating the phone to type, and chasing approvals over Webex.</p>
+      <div class="callout">Winning meant a seller could find a deal, see enough to decide, change a discount correctly, approve, or act for a colleague — without going home to a laptop.</div>
+
+      <h2>Users &amp; research</h2>
+      <p>Primary users were account executives and approvers who live in CCW. A repeated situation was personal time interrupted by a quarter-end approval. We started from a stakeholder's account of that day, turned it into a storyboard, and reviewed it with him before designing screens. Later we ran moderated interviews with account executives and synthesized findings so MVP and future state stayed separate.</p>
+      <ul>
+        <li>~90% of sessions begin with a deal ID copied from Webex, email, or a note.</li>
+        <li>The first concept — an account-filtered dashboard — fought that behavior.</li>
+        <li>Pinch-and-zoom causes accidental taps on desktop-sized controls.</li>
+        <li>Approvals are chased manually, often over Webex.</li>
+        <li>Proxy — acting for a colleague — is hard to reach and partly off-screen.</li>
+      </ul>
+      <p class="quote">"90% of the time I have a deal ID that I've copied out of Webex, out of email, written on a piece of paper."</p>
+      <p style="color:var(--muted);">— Senior account executive, research interviews</p>
+
+      <h2>Strategy &amp; approach</h2>
+      <p>I framed the job as: <em>I'm away from my desk, I already know which deal, and I need to decide without creating a new problem.</em> The principle was to finish four tasks well instead of approximating the whole desktop product — trust (enough detail to approve confidently), correctness (discounts line by line, as on desktop), speed (one primary action), and safety (confirm before submit, thumb-sized targets).</p>
+
+      <h2>Design process</h2>
+      <h3>Ideation</h3>
+      <p>The storyboard was the first concept: the same Saturday, as-is versus a phone that finishes the task. Screen concepts split between an account dashboard and a search-first home. Search won in a single working session once the deal-ID finding was clear. Discounting had two concepts — category-level (simpler, internal support) and line-level (matched desktop and research). Category-level was cut.</p>
+      <h3>IA, flows &amp; wireframes</h3>
+      <p>Primary flow: open the app, search a deal ID, review the quote, open the bill of materials, save a line discount or approve, and get a confirmation. Proxy is a separate path: Act as, a persistent banner, Switch back. Edge cases covered the wrong ID, deals needing approval, long bills of materials, and never forgetting whose book you're acting in.</p>
+      <h3>Visual &amp; UI design</h3>
+      <p>Core screens were rebuilt on OCDL / Magnetic with tokens instead of one-off colors. One card pattern covers Home, Quotes, Quote Details, Bill of Materials, and Proxy. Search by deal or quote ID leads; under it, deals waiting on a decision and an at-a-glance read of deal health. Dark and light are a mode change, not a second design.</p>
+
+      <h2>Validation &amp; iteration</h2>
+      <p>We tested the story with the stakeholder, a clickable low-fi concept with Commerce Operations, and the direction in moderated interviews. The sharpest iteration was discounting:</p>
+      <ul>
+        <li>Against real bills of materials, changing a category re-priced unrelated items — a Meraki camera could get caught inside a networking deal.</li>
+        <li>On CCW desktop, sellers already discount line by line.</li>
+        <li>A category update could extend a discount to one reseller that a contract reserves for another.</li>
+      </ul>
+      <div class="callout">The category model had internal agreement. Research corrected it — at the cost of a conversation — before development. That is the clearest design outcome in the project.</div>
+
+      <h2>Outcome &amp; impact</h2>
+      <p><strong>Shipped as a concept:</strong> a clickable prototype, a Figma file, a test plan, and a repository engineering could open. Sellers who saw screens reacted strongly — one senior AE said sharing them "was like Christmas morning."</p>
+      <p><strong>Did not ship:</strong> a production app, acceptance criteria, or a measured lift in approval time, conversion, or revenue. <span class="needs">Not launched</span> I am not attaching Cisco monetization metrics to this project; those figures live on other work.</p>
+      <h3>How I'd measure it</h3>
+      <ul>
+        <li>Time from notification to completed approval, phone vs. laptop, same deal types.</li>
+        <li>Mis-tap / abandon rate on search, discount save, and approve.</li>
+        <li>Share of sessions that start with a pasted deal ID and finish without a desktop handoff.</li>
+        <li>Proxy tasks completed without a support thread.</li>
+      </ul>
+
+      <h2>What I'd do next</h2>
+      <ul>
+        <li>Run the GSX test and return with data, not another anecdote.</li>
+        <li>Publish the AI assistant recommendations built into v4.</li>
+        <li>Decide the iOS / Magnetic / custom component split so the app feels native.</li>
+        <li>Write the development-ready spec from the OpenSpec starting point.</li>
+      </ul>
+
+      <h2>Reflections</h2>
+      <p>The storyboard did more than decorate the problem — it checked that we'd heard the stakeholder, and it was something he could forward. The fastest design win was refusing a simpler discount model; the gap is that I can't yet show what that saved in rework hours. Next time, the measurement plan goes in week one, not the case study. Building the prototype in the same loop as the design changed how reviews felt: people argue with a working screen, but struggle to specify one from a blank page.</p>
+    </article>
+
+    <section class="gallery-wrap">
+      <div class="g-head"><span class="eyebrow">Prototype screens</span><span class="hint" style="color:var(--muted);font-size:13px;">v2 lo-fi → v4 hi-fi</span></div>
+      <div class="gallery">
+        <figure><img src="../images/projects/commerce-mobile/lo-home.png" alt="v2 prototype home" /><figcaption><span class="k lo">Lo-fi · v2</span>Early search-first home — testing the dashboard and quick actions.</figcaption></figure>
+        <figure><img src="../images/projects/commerce-mobile/hi-home.png?v=2" alt="v4 home dashboard" /><figcaption><span class="k hi">Hi-fi · v4</span>Regional-manager home: approvals, deal health, and at-a-glance risk.</figcaption></figure>
+        <figure><img src="../images/projects/commerce-mobile/lo-quotes.png" alt="v2 prototype quotes list" /><figcaption><span class="k lo">Lo-fi · v2</span>Quotes list exploring filters and action states.</figcaption></figure>
+        <figure><img src="../images/projects/commerce-mobile/hi-deal.png?v=2" alt="v4 quote details" /><figcaption><span class="k hi">Hi-fi · v4</span>Quote details with a deal-health score and policy flags surfaced up front.</figcaption></figure>
+        <figure><img src="../images/projects/commerce-mobile/lo-bom.png" alt="v2 prototype bill of materials" /><figcaption><span class="k lo">Lo-fi · v2</span>Bill of materials — first pass at line editing on mobile.</figcaption></figure>
+        <figure><img src="../images/projects/commerce-mobile/hi-bom.png?v=2" alt="v4 bill of materials" /><figcaption><span class="k hi">Hi-fi · v4</span>Bill of materials with per-line discount and non-standard pricing warnings.</figcaption></figure>
+        <figure><img src="../images/projects/commerce-mobile/lo-notifications.png" alt="v2 prototype notifications" /><figcaption><span class="k lo">Lo-fi · v2</span>Notifications feed grouping approvals and deal updates.</figcaption></figure>
+        <figure><img src="../images/projects/commerce-mobile/hi-voice.png?v=2" alt="v4 voice assistant" /><figcaption><span class="k hi">Hi-fi · v4</span>Voice assistant — speak a deal number to jump straight in.</figcaption></figure>
+        <figure><img src="../images/projects/commerce-mobile/hi-profile.png?v=2" alt="v4 profile and proxy" /><figcaption><span class="k hi">Hi-fi · v4</span>Profile with act-as-another-seller proxy and theme controls.</figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <nav class="project-nav">
+    <a class="prev" href="toyota.html"><span class="np-label">← Previous</span><span class="np-title">Toyota</span></a>
+    <a class="next" href="deal-registration.html"><span class="np-label">Next →</span><span class="np-title">Deal Registration</span></a>
+  </nav>
+
+  <footer class="foot">
+    <span>© 2026 Aaron Dickerson</span>
+    <span>dickersoam@gmail.com · 469-955-8399</span>
+  </footer>
+  <script src="../js/site.js?v=8"></script>
+</body>
+</html>
