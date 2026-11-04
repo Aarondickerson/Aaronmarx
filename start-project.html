@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Start a project — AaronMarx</title>
+  <meta name="description" content="Tell me about your project and I'll reply within two business days. Websites, app concept prototypes, and interactive experiences with AaronMarx Consulting." />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css?v=9" />
+  <link rel="canonical" href="https://aaronmarx.co/start-project.html" />
+  <meta name="robots" content="noindex, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="AaronMarx" />
+  <meta property="og:title" content="Start a project — AaronMarx" />
+  <meta property="og:description" content="Tell me about your project and I'll reply within two business days." />
+  <meta property="og:url" content="https://aaronmarx.co/start-project.html" />
+  <meta property="og:image" content="https://aaronmarx.co/images/og-card.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Start a project — AaronMarx" />
+  <meta name="twitter:description" content="Tell me about your project and I'll reply within two business days." />
+  <meta name="twitter:image" content="https://aaronmarx.co/images/og-card.jpg" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#17150f" />
+</head>
+<body data-buddy="off">
+  <header class="site-head">
+    <div class="brand"><a href="index.html">AaronMarx</a> <span>— Product Designer</span></div>
+    <nav class="head-mid">
+      <a href="index.html">Work</a>
+      <a href="work.html">Index</a>
+      <a href="about.html">Profile</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="head-right">
+      <span class="clock">—</span>
+      <button class="theme-toggle" aria-label="Toggle day / night"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-head">
+      <span class="eyebrow">Start a project</span>
+      <h1 class="display">Tell me<br />what you need.</h1>
+      <p class="lead" style="margin-top:28px; max-width:40ch;">A few quick questions so I can understand the fit. No pressure, no auto-enrollment — I'll reply within two business days.</p>
+    </section>
+
+    <div class="form-wrap">
+      <!-- SUCCESS (revealed on submit) -->
+      <div id="formSuccess" class="form-success" hidden>
+        <h2 class="h2">Thanks — got it.</h2>
+        <p id="successDetail">Your inquiry is in. I'll review it and get back to you within two business days. If it's time-sensitive, email <a href="mailto:dickersoam@gmail.com">dickersoam@gmail.com</a>.</p>
+        <div class="btn-row"><a class="btn ghost" href="index.html">Back to work</a></div>
+      </div>
+
+      <!--
+        LEAD INTAKE — Formspree-ready.
+        To go live: create a free form at https://formspree.io, then replace
+        YOUR_FORM_ID below with your endpoint (e.g. https://formspree.io/f/abcwxyz).
+        Until then the form validates and shows a clearly-labeled TEST state and
+        does NOT fabricate a successful submission. No secrets live in this file.
+      -->
+      <form id="projectForm" class="form-grid"
+            action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate
+            data-endpoint-configured="false">
+
+        <div id="errorSummary" class="error-summary" role="alert" tabindex="-1">
+          <strong>Please fix the following:</strong>
+          <ul></ul>
+        </div>
+
+        <div class="field">
+          <label for="name">Your name <span class="req">*</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-required="true" />
+          <span class="err-msg" data-for="name"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span class="req">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-required="true" />
+          <span class="err-msg" data-for="email"></span>
+        </div>
+
+        <div class="field full">
+          <label for="business">Business or project <span class="req">*</span></label>
+          <input id="business" name="business" type="text" required aria-required="true" placeholder="e.g. Houston Strength Co. — a gym needing a new site" />
+          <span class="err-msg" data-for="business"></span>
+        </div>
+
+        <div class="field">
+          <label for="service">What do you need? <span class="req">*</span></label>
+          <select id="service" name="service" required aria-required="true">
+            <option value="">Select one…</option>
+            <option value="website">Website</option>
+            <option value="mobile">Mobile app concept (prototype)</option>
+            <option value="game">Game / interactive (by inquiry)</option>
+            <option value="clarity">Clarity Sprint</option>
+            <option value="support">Ongoing support</option>
+            <option value="other">Something else</option>
+          </select>
+          <span class="err-msg" data-for="service"></span>
+        </div>
+
+        <div class="field">
+          <label for="budget">Budget band <span class="req">*</span></label>
+          <select id="budget" name="budget" required aria-required="true">
+            <option value="">Select one…</option>
+            <option value="not_sure">Not sure yet</option>
+            <option value="under_1k">Under $1,000</option>
+            <option value="1k_2_5k">$1,000 – $2,500</option>
+            <option value="2_5k_5k">$2,500 – $5,000</option>
+            <option value="5k_plus">$5,000+</option>
+          </select>
+          <span class="err-msg" data-for="budget"></span>
+        </div>
+
+        <div class="field full">
+          <label for="goal">What's the goal? <span class="req">*</span></label>
+          <textarea id="goal" name="goal" required aria-required="true" placeholder="What should this help your business do? e.g. 'make it easy for customers to book a class.'"></textarea>
+          <span class="err-msg" data-for="goal"></span>
+        </div>
+
+        <div class="field">
+          <label for="timing">Preferred timing</label>
+          <select id="timing" name="timing">
+            <option value="">No strong preference</option>
+            <option value="asap">Within a month</option>
+            <option value="1_3_months">1 – 3 months</option>
+            <option value="3_plus">3+ months</option>
+            <option value="exploring">Just exploring</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="website">Current website (optional)</label>
+          <input id="website" name="website_url" type="url" inputmode="url" placeholder="https://" />
+        </div>
+
+        <label class="consent">
+          <input id="marketing" name="marketing_opt_in" type="checkbox" value="yes" />
+          <span>Occasionally email me useful updates (optional — unchecked is fine).</span>
+        </label>
+
+        <!-- honeypot: hidden from humans, catches bots -->
+        <div style="position:absolute; left:-9999px;" aria-hidden="true">
+          <label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+        </div>
+
+        <p class="form-note">Your details are used only to respond to your inquiry — never sold or shared. Please don't include passwords, payment details, or confidential files in this form.</p>
+
+        <div class="form-actions">
+          <button type="submit" class="btn" id="submitBtn">Send inquiry</button>
+          <span id="formStatus" role="status" aria-live="polite" style="font-size:14px; color:var(--muted);"></span>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <span>© 2026 Aaron Dickerson</span>
+    <span>dickersoam@gmail.com · 469-955-8399</span>
+  </footer>
+  <script src="js/site.js?v=9"></script>
+  <script src="js/consulting.js?v=1"></script>
+</body>
+</html>

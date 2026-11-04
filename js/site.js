@@ -78,6 +78,8 @@
 
 /* ===== Interactive companion (Aaron) ===== */
 (function () {
+  // Allow a page to opt out (e.g. forms) so the guide can never overlap fields/CTAs.
+  if (document.body && document.body.getAttribute("data-buddy") === "off") return;
   if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches && window.innerWidth < 520) {
     // keep it, but it'll be small; no special handling needed
   }
@@ -97,6 +99,8 @@
   } else if (inCase) {
     var h1 = document.querySelector(".display, h1");
     greeting = { pose: "point", text: "Want the story behind <b>" + (h1 ? h1.textContent.trim().split("\n")[0] : "this project") + "</b>? Scroll on." };
+  } else if (file.indexOf("consulting") === 0) {
+    greeting = { pose: "point", text: "Thinking about a project? Here's how we'd work together." };
   } else if (file.indexOf("work") === 0) {
     greeting = { pose: "arms", text: "Everything I've shipped. Hover a row for a peek." };
   } else if (file.indexOf("about") === 0) {
