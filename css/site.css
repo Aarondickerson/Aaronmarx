@@ -377,6 +377,7 @@ footer.foot { padding: 26px var(--pad); display: flex; justify-content: space-be
 /* ===== Intake form ===== */
 .form-wrap { max-width: 740px; margin: 0 auto; padding: 0 var(--pad); }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 30px; }
+.form-grid[hidden] { display: none; }
 .field { display: flex; flex-direction: column; gap: 6px; }
 .field.full { grid-column: 1 / -1; }
 .field label { font-size: 14px; color: var(--ink-soft); font-weight: 560; }

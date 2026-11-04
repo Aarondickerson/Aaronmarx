@@ -141,6 +141,7 @@
       headers: { Accept: "application/json" }
     }).then(function (res) {
       if (res.ok) {
+        statusEl.textContent = "";
         form.hidden = true;
         if (successEl) { successEl.hidden = false; successEl.focus && successEl.focus(); }
         window.scrollTo({ top: 0, behavior: "smooth" });

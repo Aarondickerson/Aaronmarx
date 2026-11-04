@@ -60,15 +60,14 @@
       </div>
 
       <!--
-        LEAD INTAKE — Formspree-ready.
-        To go live: create a free form at https://formspree.io, then replace
-        YOUR_FORM_ID below with your endpoint (e.g. https://formspree.io/f/abcwxyz).
-        Until then the form validates and shows a clearly-labeled TEST state and
-        does NOT fabricate a successful submission. No secrets live in this file.
+        LEAD INTAKE — wired to Formspree (public endpoint, no secret).
+        Submissions email dickersoam@gmail.com and appear in the Formspree
+        dashboard. Handled by js/consulting.js via fetch/AJAX; success is shown
+        only on a real 200, input is preserved on failure.
       -->
       <form id="projectForm" class="form-grid"
-            action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate
-            data-endpoint-configured="false">
+            action="https://formspree.io/f/mdeebzvn" method="POST" novalidate
+            data-endpoint-configured="true">
 
         <div id="errorSummary" class="error-summary" role="alert" tabindex="-1">
           <strong>Please fix the following:</strong>
@@ -167,6 +166,6 @@
     <span>dickersoam@gmail.com · 469-955-8399</span>
   </footer>
   <script src="js/site.js?v=9"></script>
-  <script src="js/consulting.js?v=1"></script>
+  <script src="js/consulting.js?v=2"></script>
 </body>
 </html>
