@@ -1,0 +1,12 @@
+{
+  "name": "AaronMarx — Product Designer",
+  "short_name": "AaronMarx",
+  "icons": [
+    {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ],
+  "theme_color": "#17150f",
+  "background_color": "#17150f",
+  "display": "standalone",
+  "start_url": "/"
+}

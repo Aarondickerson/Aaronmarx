@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /case-studies/commerce-mobile.html
+Disallow: /case-studies/deal-registration.html
+
+Sitemap: https://aaronmarx.co/sitemap.xml
