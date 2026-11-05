@@ -7,7 +7,7 @@
   <meta name="description" content="AaronMarx Consulting — founder-led product design and build. Websites, app concept prototypes, and interactive experiences, from a clear first scope to the next useful improvement." />
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css?v=9" />
+  <link rel="stylesheet" href="css/site.css?v=10" />
   <link rel="canonical" href="https://aaronmarx.co/consulting.html" />
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="website" />
@@ -33,17 +33,22 @@
 </head>
 <body>
   <header class="site-head">
-    <div class="brand"><a href="index.html">AaronMarx</a> <span>— Product Designer</span></div>
+    <div class="brand"><a href="index.html">AaronMarx</a> <span>— Digital Consultant</span></div>
     <nav class="head-mid">
       <a href="index.html">Work</a>
       <a href="work.html">Index</a>
       <a href="about.html">Profile</a>
-      <a href="consulting.html" aria-current="page">Consulting</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="head-right">
-      <span class="clock">—</span>
-      <button class="theme-toggle" aria-label="Toggle day / night"></button>
+      <a class="head-cta" href="consulting.html" aria-current="page">Consulting</a>
+      <details class="nest">
+        <summary aria-label="More options">☰</summary>
+        <div class="nest-panel">
+          <span class="clock">—</span>
+          <button class="theme-toggle" aria-label="Toggle day / night"></button>
+        </div>
+      </details>
     </div>
   </header>
 
@@ -52,7 +57,7 @@
     <section class="consult-hero">
       <span class="eyebrow">AaronMarx Consulting</span>
       <h1 class="display" style="margin-top:18px;">Build your next<br /><span class="u-serif">digital move.</span></h1>
-      <p class="lede">Websites, app prototypes, and interactive experiences — designed and built with Aaron, from the first clear scope to the next useful improvement. Direct, senior collaboration; no account layers, no bloated team.</p>
+      <p class="lede">Websites, app prototypes, and interactive experiences — designed and built with Aaron, from the first clear scope to the next useful improvement. Direct, hands-on collaboration; no account layers, no bloated team.</p>
       <div class="btn-row">
         <a class="btn" href="start-project.html">Start a project</a>
         <a class="btn ghost" href="index.html">Explore my work</a>
@@ -125,9 +130,8 @@
       <div class="pkg-grid">
 
         <div class="pkg-card">
-          <span class="pkg-name">Clarity Sprint</span>
-          <div class="pkg-price"><span class="from">From</span>$350</div>
-          <div class="pkg-meta">~1 week · one working session</div>
+          <span class="pkg-name">Consulting Session</span>
+          <div class="pkg-meta"><span class="pkg-start">Starts at $350</span> · ~1 week · one working session</div>
           <ul class="pkg-list">
             <li>One 60-minute working session</li>
             <li>Short written brief</li>
@@ -135,13 +139,12 @@
             <li>Recommended next step</li>
           </ul>
           <p class="pkg-excl"><b>Not included:</b> finished design or development.</p>
-          <a class="btn" href="start-project.html?service=clarity">Book a sprint</a>
+          <a class="btn" href="start-project.html?service=clarity">Book a session</a>
         </div>
 
         <div class="pkg-card">
           <span class="pkg-name">Launch Page</span>
-          <div class="pkg-price"><span class="from">From</span>$950</div>
-          <div class="pkg-meta">2–3 weeks · 1 page</div>
+          <div class="pkg-meta"><span class="pkg-start">Starts at $950</span> · 2–3 weeks · 1 page</div>
           <ul class="pkg-list">
             <li>One responsive page, up to 6 sections</li>
             <li>One inquiry form or booking embed</li>
@@ -154,8 +157,7 @@
 
         <div class="pkg-card">
           <span class="pkg-name">Small Business Website</span>
-          <div class="pkg-price"><span class="from">From</span>$2,250</div>
-          <div class="pkg-meta">4–6 weeks · up to 5 pages</div>
+          <div class="pkg-meta"><span class="pkg-start">Starts at $2,250</span> · 4–6 weeks · up to 5 pages</div>
           <ul class="pkg-list">
             <li>Up to 5 pages, one shared design system</li>
             <li>One form + one booking integration</li>
@@ -168,8 +170,7 @@
 
         <div class="pkg-card">
           <span class="pkg-name">Mobile Concept Sprint</span>
-          <div class="pkg-price"><span class="from">From</span>$1,500</div>
-          <div class="pkg-meta">2–4 weeks · clickable prototype</div>
+          <div class="pkg-meta"><span class="pkg-start">Starts at $1,500</span> · 2–4 weeks · clickable prototype</div>
           <ul class="pkg-list">
             <li>One main user flow, up to 8 screens</li>
             <li>Clickable prototype</li>
@@ -182,8 +183,7 @@
 
         <div class="pkg-card">
           <span class="pkg-name">Browser Game Prototype</span>
-          <div class="pkg-price"><span class="inq">By inquiry</span></div>
-          <div class="pkg-meta">Scoped per idea · experimental lane</div>
+          <div class="pkg-meta"><span class="pkg-start">By inquiry</span> · scoped per idea · experimental lane</div>
           <ul class="pkg-list">
             <li>One 2D mechanic, one level/mode</li>
             <li>Start / play / restart</li>
@@ -246,7 +246,7 @@
     <section class="section"><div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Why work with me</span>
-        <h2 class="h2">Senior work, direct</h2>
+        <h2 class="h2">Experienced work, direct</h2>
       </div>
       <div class="why-grid">
         <div class="why-card"><h3>You work with me</h3><p>No handoffs to a junior team. The person scoping your project is the person designing and building it.</p></div>
@@ -291,6 +291,6 @@
     <span>© 2026 Aaron Dickerson</span>
     <span>dickersoam@gmail.com · 469-955-8399</span>
   </footer>
-  <script src="js/site.js?v=9"></script>
+  <script src="js/site.js?v=10"></script>
 </body>
 </html>
