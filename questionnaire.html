@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discovery questionnaire — AaronMarx</title>
+  <meta name="description" content="A short discovery questionnaire so we can scope the right first version of your booking / client-growth app." />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css?v=10" />
+  <link rel="canonical" href="https://aaronmarx.co/questionnaire.html" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#17150f" />
+  <style>
+    /* Questionnaire-specific styles (reuses .field / .btn / .form-success from site.css) */
+    .q-form { max-width: 760px; margin: 30px auto 0; }
+    .q-form[hidden] { display: none; }
+    .q-legend { display: inline-flex; align-items: center; gap: 8px; background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--ink); border-radius: 8px; padding: 9px 14px; font-size: 14px; margin-top: 18px; }
+    .q-legend b { color: var(--accent); }
+    .q-section { margin-top: 44px; }
+    .q-section-head { display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 22px; }
+    .q-eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 650; }
+    .q-section-head h2 { margin: 0; font-size: 21px; }
+    .q-form .field { margin-bottom: 20px; }
+    .q-num { color: var(--accent); font-weight: 700; margin-right: 2px; }
+    .q-star { color: var(--accent); margin-right: 4px; }
+    .checks { display: flex; flex-wrap: wrap; gap: 10px 12px; }
+    .chk { display: inline-flex; align-items: center; gap: 9px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 9px 13px; font-size: 15px; color: var(--ink-soft); cursor: pointer; user-select: none; }
+    .chk:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+    .chk input { width: auto; margin: 0; accent-color: var(--accent); }
+    .chk:has(input:checked) { border-color: var(--accent); color: var(--ink); background: color-mix(in srgb, var(--accent) 10%, var(--card)); }
+    .q-subfield { margin-top: 10px; }
+  </style>
+</head>
+<body data-buddy="off">
+  <header class="site-head">
+    <div class="brand"><a href="index.html">AaronMarx</a></div>
+    <nav class="head-mid">
+      <a href="index.html">Work</a>
+      <a href="work.html">Index</a>
+      <a href="about.html">Profile</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="head-right">
+      <a class="head-cta" href="consulting.html">Consulting</a>
+      <details class="nest">
+        <summary aria-label="More options">☰</summary>
+        <div class="nest-panel">
+          <span class="clock">—</span>
+          <button class="theme-toggle" aria-label="Toggle day / night"></button>
+        </div>
+      </details>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-head">
+      <span class="eyebrow">Discovery</span>
+      <h1 class="display" id="qTitle">Project<br />questionnaire.</h1>
+      <p class="lead" id="qLead" style="margin-top:28px; max-width:52ch;"></p>
+      <div class="q-legend"><b>★</b> <span>= the questions most helpful for our first conversation. Answer what you can — "not sure" is fine.</span></div>
+    </section>
+
+    <div class="form-wrap">
+      <!-- SUCCESS (revealed on a real submit) -->
+      <div id="formSuccess" class="form-success" hidden>
+        <h2 class="h2">Thank you — got it.</h2>
+        <p id="successDetail">Your answers are in. I'll review them and follow up to set a time to go through everything together. If anything's time-sensitive, email <a href="mailto:dickersoam@gmail.com">dickersoam@gmail.com</a>.</p>
+        <div class="btn-row"><a class="btn ghost" href="consulting.html">Back to consulting</a></div>
+      </div>
+
+      <!--
+        DISCOVERY QUESTIONNAIRE — wired to Formspree (public endpoint, no secret).
+        Reusable + configurable via query params (see js/questionnaire.js):
+          ?client=El%20Padrino&platform=SQUIRE&provider=barber&providers=barbers&plans=Executive,Titan
+        Fields are rendered by js/questionnaire.js. Submits via fetch; success only on a real 200.
+      -->
+      <form id="questionnaireForm" class="q-form" action="https://formspree.io/f/mdeebzvn" method="POST" novalidate data-endpoint-configured="true">
+        <div id="errorSummary" class="error-summary" role="alert" tabindex="-1">
+          <strong>Please fix the following:</strong>
+          <ul></ul>
+        </div>
+
+        <!-- JS injects the contact block + all sections here -->
+        <div id="qFields"></div>
+
+        <!-- honeypot: hidden from humans, catches bots -->
+        <div style="position:absolute; left:-9999px;" aria-hidden="true">
+          <label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+        </div>
+
+        <input type="hidden" name="_subject" id="qSubject" value="Discovery questionnaire" />
+        <input type="hidden" name="form_type" value="discovery_questionnaire" />
+        <input type="hidden" name="client" id="qClient" value="" />
+
+        <p class="form-note">Your answers are used only to scope and discuss your project — never sold or shared. Please don't include passwords, payment details, or confidential files here.</p>
+
+        <div class="form-actions">
+          <button type="submit" class="btn" id="submitBtn">Send answers</button>
+          <span id="formStatus" role="status" aria-live="polite" style="font-size:14px; color:var(--muted);"></span>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <span>© 2026 Aaron Dickerson</span>
+    <span>dickersoam@gmail.com · 469-955-8399</span>
+  </footer>
+  <script src="js/site.js?v=10"></script>
+  <script src="js/questionnaire.js?v=1"></script>
+</body>
+</html>
