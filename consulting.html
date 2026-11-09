@@ -7,7 +7,7 @@
   <meta name="description" content="AaronMarx Consulting — founder-led product design and build. Websites, app concept prototypes, and interactive experiences, from a clear first scope to the next useful improvement." />
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css?v=10" />
+  <link rel="stylesheet" href="css/site.css?v=11" />
   <link rel="canonical" href="https://aaronmarx.co/consulting.html" />
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="website" />
@@ -35,13 +35,17 @@
   <header class="site-head">
     <div class="brand"><a href="index.html">AaronMarx</a></div>
     <nav class="head-mid">
-      <a href="index.html">Work</a>
-      <a href="work.html">Index</a>
-      <a href="about.html">Profile</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-i18n="nav.work">Work</a>
+      <a href="work.html" data-i18n="nav.index">Index</a>
+      <a href="about.html" data-i18n="nav.profile">Profile</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="head-right">
-      <a class="head-cta" href="consulting.html" aria-current="page">Consulting</a>
+      <a class="head-cta" href="consulting.html" aria-current="page" data-i18n="nav.consulting">Consulting</a>
+      <div class="lang-toggle" role="group" aria-label="Language — Idioma">
+        <button type="button" class="lang-opt is-active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-opt" data-lang="es" aria-pressed="false">ES</button>
+      </div>
       <details class="nest">
         <summary aria-label="More options">☰</summary>
         <div class="nest-panel">
@@ -55,39 +59,39 @@
   <main>
     <!-- 1 · Hero -->
     <section class="consult-hero">
-      <span class="eyebrow">AaronMarx Consulting</span>
-      <h1 class="display" style="margin-top:18px;">Build your next<br /><span class="u-serif">digital move.</span></h1>
-      <p class="lede">Websites, app prototypes, and interactive experiences — designed and built with Aaron, from the first clear scope to the next useful improvement. Direct, hands-on collaboration; no account layers, no bloated team.</p>
+      <span class="eyebrow" data-i18n="c.eyebrow">AaronMarx Consulting</span>
+      <h1 class="display" style="margin-top:18px;" data-i18n-html="c.hero.title">Build your next<br /><span class="u-serif">digital move.</span></h1>
+      <p class="lede" data-i18n="c.hero.lede">Websites, app prototypes, and interactive experiences — designed and built with Aaron, from the first clear scope to the next useful improvement. Direct, hands-on collaboration; no account layers, no bloated team.</p>
       <div class="btn-row">
-        <a class="btn" href="start-project.html">Start a project</a>
-        <a class="btn ghost" href="index.html">Explore my work</a>
+        <a class="btn" href="start-project.html" data-i18n="c.hero.cta1">Start a project</a>
+        <a class="btn ghost" href="index.html" data-i18n="c.hero.cta2">Explore my work</a>
       </div>
     </section>
 
     <!-- 2 · Service paths -->
     <section class="section"><div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">What I help with</span>
-        <h2 class="h2">Three ways to start</h2>
+        <span class="eyebrow" data-i18n="c.s2.eyebrow">What I help with</span>
+        <h2 class="h2" data-i18n="c.s2.h2">Three ways to start</h2>
       </div>
       <div class="svc-grid">
         <div class="svc-card">
-          <span class="maturity">Production-ready</span>
-          <h3 class="h3">Websites</h3>
-          <p>Credible, fast, responsive sites that make your business look sharp and make it easy for customers to reach you. Clear structure, honest copy support, basic SEO built in.</p>
-          <a class="svc-link" href="start-project.html?service=website">Start a website →</a>
+          <span class="maturity" data-i18n="c.svc1.badge">Production-ready</span>
+          <h3 class="h3" data-i18n="c.svc1.h3">Websites</h3>
+          <p data-i18n="c.svc1.p">Credible, fast, responsive sites that make your business look sharp and make it easy for customers to reach you. Clear structure, honest copy support, basic SEO built in.</p>
+          <a class="svc-link" href="start-project.html?service=website" data-i18n="c.svc1.link">Start a website →</a>
         </div>
         <div class="svc-card">
-          <span class="maturity">Prototype first · full build by inquiry</span>
-          <h3 class="h3">Mobile &amp; web apps</h3>
-          <p>Validate an idea with a clickable prototype and a plain implementation plan — or go further with an installable web app (PWA) your customers add to their phone, with booking, payments, and messaging. Scoped discovery-first; full builds by inquiry.</p>
-          <a class="svc-link" href="start-project.html?service=mobile">Validate a concept →</a>
+          <span class="maturity" data-i18n="c.svc2.badge">Prototype first · full build by inquiry</span>
+          <h3 class="h3" data-i18n="c.svc2.h3">Mobile &amp; web apps</h3>
+          <p data-i18n="c.svc2.p">Validate an idea with a clickable prototype and a plain implementation plan — or go further with an installable web app (PWA) your customers add to their phone, with booking, payments, and messaging. Scoped discovery-first; full builds by inquiry.</p>
+          <a class="svc-link" href="start-project.html?service=mobile" data-i18n="c.svc2.link">Validate a concept →</a>
         </div>
         <div class="svc-card">
-          <span class="maturity">Experimental · by inquiry</span>
-          <h3 class="h3">Games &amp; interactive</h3>
-          <p>Small 2D browser games and branded interactive experiences — one mechanic, done well. Currently offered by inquiry while the delivery approach is being proven.</p>
-          <a class="svc-link" href="start-project.html?service=game">Ask about a prototype →</a>
+          <span class="maturity" data-i18n="c.svc3.badge">Experimental · by inquiry</span>
+          <h3 class="h3" data-i18n="c.svc3.h3">Games &amp; interactive</h3>
+          <p data-i18n="c.svc3.p">Small 2D browser games and branded interactive experiences — one mechanic, done well. Currently offered by inquiry while the delivery approach is being proven.</p>
+          <a class="svc-link" href="start-project.html?service=game" data-i18n="c.svc3.link">Ask about a prototype →</a>
         </div>
       </div>
     </div></section>
@@ -95,191 +99,191 @@
     <!-- 3 · Work proof -->
     <section class="section"><div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Recent work</span>
-        <h2 class="h2">A sense of the craft</h2>
-        <p class="sec-lead">A couple of relevant examples, labeled honestly. Enterprise projects below were done as an employed designer, not as independent client engagements.</p>
+        <span class="eyebrow" data-i18n="c.s3.eyebrow">Recent work</span>
+        <h2 class="h2" data-i18n="c.s3.h2">A sense of the craft</h2>
+        <p class="sec-lead" data-i18n="c.s3.lead">A couple of relevant examples, labeled honestly. Enterprise projects below were done as an employed designer, not as independent client engagements.</p>
       </div>
       <div class="work-proof">
         <a class="proof-card" href="case-studies/moveness.html">
           <div class="cover"><img src="images/projects/moveness/thumb.jpg?v=2" alt="Moveness — local movement platform concept" /></div>
           <div class="body">
-            <span class="label">Personal product · pre-launch</span>
+            <span class="label" data-i18n="c.proof1.label">Personal product · pre-launch</span>
             <h3>Moveness</h3>
-            <p>Brand, product thinking, and interface for a local fitness/movement platform — concept through pre-launch.</p>
+            <p data-i18n="c.proof1.p">Brand, product thinking, and interface for a local fitness/movement platform — concept through pre-launch.</p>
           </div>
         </a>
         <a class="proof-card" href="case-studies/wabi2b.html">
           <div class="cover"><img src="images/projects/wabi2b/thumb.jpg" alt="Wabi2b — B2B commerce" /></div>
           <div class="body">
-            <span class="label">Employment work · Coca-Cola</span>
+            <span class="label" data-i18n="c.proof2.label">Employment work · Coca-Cola</span>
             <h3>Wabi2b</h3>
-            <p>B2B commerce experience design at scale — research, flows, and a shared design system.</p>
+            <p data-i18n="c.proof2.p">B2B commerce experience design at scale — research, flows, and a shared design system.</p>
           </div>
         </a>
       </div>
-      <div class="btn-row"><a class="btn ghost" href="work.html">See the full index →</a></div>
+      <div class="btn-row"><a class="btn ghost" href="work.html" data-i18n="c.s3.link">See the full index →</a></div>
     </div></section>
 
     <!-- 4 · Starter packages -->
     <section class="section"><div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Starter packages</span>
-        <h2 class="h2">Clear scope, clear price</h2>
-        <p class="sec-lead">Starting prices for the first pilot clients. Each package is a defined scope — final quotes confirm inclusions, timeline, and anything outside the boundary. Prices assume supplied brand/copy and two consolidated revision rounds.</p>
+        <span class="eyebrow" data-i18n="c.s4.eyebrow">Starter packages</span>
+        <h2 class="h2" data-i18n="c.s4.h2">Clear scope, clear price</h2>
+        <p class="sec-lead" data-i18n="c.s4.lead">Starting prices for the first pilot clients. Each package is a defined scope — final quotes confirm inclusions, timeline, and anything outside the boundary. Prices assume supplied brand/copy and two consolidated revision rounds.</p>
       </div>
       <div class="pkg-grid">
 
         <div class="pkg-card">
-          <span class="pkg-name">Consulting Session</span>
-          <div class="pkg-meta"><span class="pkg-start">Starts at $350</span> · ~1 week · one working session</div>
+          <span class="pkg-name" data-i18n="c.pkg1.name">Consulting Session</span>
+          <div class="pkg-meta" data-i18n-html="c.pkg1.meta"><span class="pkg-start">Starts at $350</span> · ~1 week · one working session</div>
           <ul class="pkg-list">
-            <li>One 60-minute working session</li>
-            <li>Short written brief</li>
-            <li>Prioritized scope</li>
-            <li>Recommended next step</li>
+            <li data-i18n="c.pkg1.li1">One 60-minute working session</li>
+            <li data-i18n="c.pkg1.li2">Short written brief</li>
+            <li data-i18n="c.pkg1.li3">Prioritized scope</li>
+            <li data-i18n="c.pkg1.li4">Recommended next step</li>
           </ul>
-          <p class="pkg-excl"><b>Not included:</b> finished design or development.</p>
-          <a class="btn" href="start-project.html?service=clarity">Book a session</a>
+          <p class="pkg-excl" data-i18n-html="c.pkg1.excl"><b>Not included:</b> finished design or development.</p>
+          <a class="btn" href="start-project.html?service=clarity" data-i18n="c.pkg1.btn">Book a session</a>
         </div>
 
         <div class="pkg-card">
-          <span class="pkg-name">Launch Page</span>
-          <div class="pkg-meta"><span class="pkg-start">Starts at $950</span> · 2–3 weeks · 1 page</div>
+          <span class="pkg-name" data-i18n="c.pkg2.name">Launch Page</span>
+          <div class="pkg-meta" data-i18n-html="c.pkg2.meta"><span class="pkg-start">Starts at $950</span> · 2–3 weeks · 1 page</div>
           <ul class="pkg-list">
-            <li>One responsive page, up to 6 sections</li>
-            <li>One inquiry form or booking embed</li>
-            <li>Basic page SEO</li>
-            <li>Two consolidated revision rounds</li>
+            <li data-i18n="c.pkg2.li1">One responsive page, up to 6 sections</li>
+            <li data-i18n="c.pkg2.li2">One inquiry form or booking embed</li>
+            <li data-i18n="c.pkg2.li3">Basic page SEO</li>
+            <li data-i18n="c.pkg2.li4">Two consolidated revision rounds</li>
           </ul>
-          <p class="pkg-excl"><b>Not included:</b> custom booking engine, ecommerce, full copywriting, identity design.</p>
-          <a class="btn" href="start-project.html?service=website">Start a launch page</a>
+          <p class="pkg-excl" data-i18n-html="c.pkg2.excl"><b>Not included:</b> custom booking engine, ecommerce, full copywriting, identity design.</p>
+          <a class="btn" href="start-project.html?service=website" data-i18n="c.pkg2.btn">Start a launch page</a>
         </div>
 
         <div class="pkg-card">
-          <span class="pkg-name">Small Business Website</span>
-          <div class="pkg-meta"><span class="pkg-start">Starts at $2,250</span> · 4–6 weeks · up to 5 pages</div>
+          <span class="pkg-name" data-i18n="c.pkg3.name">Small Business Website</span>
+          <div class="pkg-meta" data-i18n-html="c.pkg3.meta"><span class="pkg-start">Starts at $2,250</span> · 4–6 weeks · up to 5 pages</div>
           <ul class="pkg-list">
-            <li>Up to 5 pages, one shared design system</li>
-            <li>One form + one booking integration</li>
-            <li>Basic SEO and clean handoff</li>
-            <li>Two consolidated revision rounds</li>
+            <li data-i18n="c.pkg3.li1">Up to 5 pages, one shared design system</li>
+            <li data-i18n="c.pkg3.li2">One form + one booking integration</li>
+            <li data-i18n="c.pkg3.li3">Basic SEO and clean handoff</li>
+            <li data-i18n="c.pkg3.li4">Two consolidated revision rounds</li>
           </ul>
-          <p class="pkg-excl"><b>Not included:</b> member login, custom CRM, commerce, complex migration.</p>
-          <a class="btn" href="start-project.html?service=website">Start a website</a>
+          <p class="pkg-excl" data-i18n-html="c.pkg3.excl"><b>Not included:</b> member login, custom CRM, commerce, complex migration.</p>
+          <a class="btn" href="start-project.html?service=website" data-i18n="c.pkg3.btn">Start a website</a>
         </div>
 
         <div class="pkg-card">
-          <span class="pkg-name">Mobile Concept Sprint</span>
-          <div class="pkg-meta"><span class="pkg-start">Starts at $1,500</span> · 2–4 weeks · clickable prototype</div>
+          <span class="pkg-name" data-i18n="c.pkg4.name">Mobile Concept Sprint</span>
+          <div class="pkg-meta" data-i18n-html="c.pkg4.meta"><span class="pkg-start">Starts at $1,500</span> · 2–4 weeks · clickable prototype</div>
           <ul class="pkg-list">
-            <li>One main user flow, up to 8 screens</li>
-            <li>Clickable prototype</li>
-            <li>Brief implementation plan</li>
-            <li>Two consolidated revision rounds</li>
+            <li data-i18n="c.pkg4.li1">One main user flow, up to 8 screens</li>
+            <li data-i18n="c.pkg4.li2">Clickable prototype</li>
+            <li data-i18n="c.pkg4.li3">Brief implementation plan</li>
+            <li data-i18n="c.pkg4.li4">Two consolidated revision rounds</li>
           </ul>
-          <p class="pkg-excl"><b>Not included:</b> production backend, native release, store submission.</p>
-          <a class="btn" href="start-project.html?service=mobile">Start a concept sprint</a>
+          <p class="pkg-excl" data-i18n-html="c.pkg4.excl"><b>Not included:</b> production backend, native release, store submission.</p>
+          <a class="btn" href="start-project.html?service=mobile" data-i18n="c.pkg4.btn">Start a concept sprint</a>
         </div>
 
         <div class="pkg-card">
-          <span class="pkg-name">Browser Game Prototype</span>
-          <div class="pkg-meta"><span class="pkg-start">By inquiry</span> · scoped per idea · experimental lane</div>
+          <span class="pkg-name" data-i18n="c.pkg5.name">Browser Game Prototype</span>
+          <div class="pkg-meta" data-i18n-html="c.pkg5.meta"><span class="pkg-start">By inquiry</span> · scoped per idea · experimental lane</div>
           <ul class="pkg-list">
-            <li>One 2D mechanic, one level/mode</li>
-            <li>Start / play / restart</li>
-            <li>Desktop and touch input</li>
-            <li>Supplied or licensed assets</li>
+            <li data-i18n="c.pkg5.li1">One 2D mechanic, one level/mode</li>
+            <li data-i18n="c.pkg5.li2">Start / play / restart</li>
+            <li data-i18n="c.pkg5.li3">Desktop and touch input</li>
+            <li data-i18n="c.pkg5.li4">Supplied or licensed assets</li>
           </ul>
-          <p class="pkg-excl"><b>Not included:</b> multiplayer, accounts, payments, custom 3D art, live ops.</p>
-          <a class="btn" href="start-project.html?service=game">Ask about a prototype</a>
+          <p class="pkg-excl" data-i18n-html="c.pkg5.excl"><b>Not included:</b> multiplayer, accounts, payments, custom 3D art, live ops.</p>
+          <a class="btn" href="start-project.html?service=game" data-i18n="c.pkg5.btn">Ask about a prototype</a>
         </div>
 
       </div>
-      <p class="policy-note">Billing: projects are typically 50% at booking and 50% at accepted handoff. A 14-day post-launch defect window covers deviations from accepted scope. Hosting, domains, paid fonts/assets, subscriptions, and store fees are separate and disclosed before approval. Native app and production game builds require paid discovery and a separate quote. Final contract terms are confirmed in writing before work begins.</p>
+      <p class="policy-note" data-i18n="c.s4.note">Billing: projects are typically 50% at booking and 50% at accepted handoff. A 14-day post-launch defect window covers deviations from accepted scope. Hosting, domains, paid fonts/assets, subscriptions, and store fees are separate and disclosed before approval. Native app and production game builds require paid discovery and a separate quote. Final contract terms are confirmed in writing before work begins.</p>
     </div></section>
 
     <!-- 5 · Process -->
     <section class="section"><div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">How we work</span>
-        <h2 class="h2">Four honest steps</h2>
+        <span class="eyebrow" data-i18n="c.s5.eyebrow">How we work</span>
+        <h2 class="h2" data-i18n="c.s5.h2">Four honest steps</h2>
       </div>
       <div class="steps">
-        <div class="step"><div class="n">01</div><h3>Scope</h3><p>A short fit call, then a written scope with deliverables, exclusions, acceptance criteria, cost, and dates.</p></div>
-        <div class="step"><div class="n">02</div><h3>Build</h3><p>Weekly status: what's done, what's next, decisions needed, and risks. Feedback consolidated at milestones.</p></div>
-        <div class="step"><div class="n">03</div><h3>Launch</h3><p>Acceptance checklist, deployment, and a clean handoff — you own your domain, accounts, and files.</p></div>
-        <div class="step"><div class="n">04</div><h3>Improve</h3><p>A 90-day opportunity backlog and optional monthly support, reviewed against one agreed outcome.</p></div>
+        <div class="step"><div class="n">01</div><h3 data-i18n="c.step1.h3">Scope</h3><p data-i18n="c.step1.p">A short fit call, then a written scope with deliverables, exclusions, acceptance criteria, cost, and dates.</p></div>
+        <div class="step"><div class="n">02</div><h3 data-i18n="c.step2.h3">Build</h3><p data-i18n="c.step2.p">Weekly status: what's done, what's next, decisions needed, and risks. Feedback consolidated at milestones.</p></div>
+        <div class="step"><div class="n">03</div><h3 data-i18n="c.step3.h3">Launch</h3><p data-i18n="c.step3.p">Acceptance checklist, deployment, and a clean handoff — you own your domain, accounts, and files.</p></div>
+        <div class="step"><div class="n">04</div><h3 data-i18n="c.step4.h3">Improve</h3><p data-i18n="c.step4.p">A 90-day opportunity backlog and optional monthly support, reviewed against one agreed outcome.</p></div>
       </div>
     </div></section>
 
     <!-- 6 · Monthly support -->
     <section class="section"><div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Optional ongoing support</span>
-        <h2 class="h2">Keep improving, without a full-time hire</h2>
-        <p class="sec-lead">Monthly plans with a fixed block of reserved time. No unlimited requests, no surprise bills — a visible queue and one active request at a time.</p>
+        <span class="eyebrow" data-i18n="c.s6.eyebrow">Optional ongoing support</span>
+        <h2 class="h2" data-i18n="c.s6.h2">Keep improving, without a full-time hire</h2>
+        <p class="sec-lead" data-i18n="c.s6.lead">Monthly plans with a fixed block of reserved time. No unlimited requests, no surprise bills — a visible queue and one active request at a time.</p>
       </div>
       <div class="plan-grid">
         <div class="plan-card">
-          <span class="plan-name">Care</span>
-          <div class="plan-hours">1 hour included / month</div>
-          <p>Routine checks and small content or fix requests, with a brief monthly activity summary.</p>
+          <span class="plan-name" data-i18n="c.plan1.name">Care</span>
+          <div class="plan-hours" data-i18n="c.plan1.hours">1 hour included / month</div>
+          <p data-i18n="c.plan1.p">Routine checks and small content or fix requests, with a brief monthly activity summary.</p>
         </div>
         <div class="plan-card feat">
-          <span class="plan-name">Improve</span>
-          <div class="plan-hours">4 hours included / month</div>
-          <p>Prioritized design, development, and content improvements with a monthly review of progress.</p>
+          <span class="plan-name" data-i18n="c.plan2.name">Improve</span>
+          <div class="plan-hours" data-i18n="c.plan2.hours">4 hours included / month</div>
+          <p data-i18n="c.plan2.p">Prioritized design, development, and content improvements with a monthly review of progress.</p>
         </div>
         <div class="plan-card">
-          <span class="plan-name">Partner</span>
-          <div class="plan-hours">8 hours included / month</div>
-          <p>A larger ongoing backlog, experiments, and twice-monthly check-ins.</p>
+          <span class="plan-name" data-i18n="c.plan3.name">Partner</span>
+          <div class="plan-hours" data-i18n="c.plan3.hours">8 hours included / month</div>
+          <p data-i18n="c.plan3.p">A larger ongoing backlog, experiments, and twice-monthly check-ins.</p>
         </div>
       </div>
-      <p class="policy-note">Requests are acknowledged within two business days (Mon–Fri, America/Chicago). Acknowledgment isn't resolution — you'll get an estimate and schedule after triage. All checks, reporting, calls, and implementation draw from included time; unused hours expire monthly because capacity is reserved. Additional work is always approved in writing with a quote first — never auto-charged. Plans are billed monthly and cancellable before the next renewal; a retainer is never required to keep ownership of your site.</p>
+      <p class="policy-note" data-i18n="c.s6.note">Requests are acknowledged within two business days (Mon–Fri, America/Chicago). Acknowledgment isn't resolution — you'll get an estimate and schedule after triage. All checks, reporting, calls, and implementation draw from included time; unused hours expire monthly because capacity is reserved. Additional work is always approved in writing with a quote first — never auto-charged. Plans are billed monthly and cancellable before the next renewal; a retainer is never required to keep ownership of your site.</p>
     </div></section>
 
     <!-- 7 · Why Aaron -->
     <section class="section"><div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Why work with me</span>
-        <h2 class="h2">Experienced work, direct</h2>
+        <span class="eyebrow" data-i18n="c.s7.eyebrow">Why work with me</span>
+        <h2 class="h2" data-i18n="c.s7.h2">Experienced work, direct</h2>
       </div>
       <div class="why-grid">
-        <div class="why-card"><h3>You work with me</h3><p>No handoffs to a junior team. The person scoping your project is the person designing and building it.</p></div>
-        <div class="why-card"><h3>15+ years of product design</h3><p>Research-driven work across commerce, IoT, and SaaS for teams including Cisco, Coca-Cola, and Verizon.</p></div>
-        <div class="why-card"><h3>Built to be measured</h3><p>We agree on one outcome and a baseline, then build toward it — no invented results, no vanity metrics.</p></div>
+        <div class="why-card"><h3 data-i18n="c.why1.h3">You work with me</h3><p data-i18n="c.why1.p">No handoffs to a junior team. The person scoping your project is the person designing and building it.</p></div>
+        <div class="why-card"><h3 data-i18n="c.why2.h3">15+ years of product design</h3><p data-i18n="c.why2.p">Research-driven work across commerce, IoT, and SaaS for teams including Cisco, Coca-Cola, and Verizon.</p></div>
+        <div class="why-card"><h3 data-i18n="c.why3.h3">Built to be measured</h3><p data-i18n="c.why3.p">We agree on one outcome and a baseline, then build toward it — no invented results, no vanity metrics.</p></div>
       </div>
     </div></section>
 
     <!-- 8 · FAQ -->
     <section class="section"><div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Good to know</span>
-        <h2 class="h2">Questions, answered</h2>
+        <span class="eyebrow" data-i18n="c.s8.eyebrow">Good to know</span>
+        <h2 class="h2" data-i18n="c.s8.h2">Questions, answered</h2>
       </div>
       <div class="faq">
-        <details><summary>Who owns the final website and accounts?</summary><div class="faq-body">You do. You own your domain, hosting, and third-party accounts, and you keep the delivered files. Ownership never depends on staying on a support plan.</div></details>
-        <details><summary>What costs are separate from the project fee?</summary><div class="faq-body">Hosting, domain registration, paid fonts or stock assets, software subscriptions, ad spend, and any store/platform fees. These are disclosed and approved before anything is purchased.</div></details>
-        <details><summary>How long do projects take?</summary><div class="faq-body">Indicative windows: a launch page in 2–3 weeks, a small site in 4–6 weeks, a concept sprint in 2–4 weeks — from kickoff and receipt of the materials I need. Dates are confirmed against actual capacity before we book.</div></details>
-        <details><summary>How do revisions work?</summary><div class="faq-body">Each project includes two consolidated revision rounds at agreed milestones. Larger changes or new scope are quoted separately so the timeline and price stay honest.</div></details>
-        <details><summary>What's the difference between a prototype and a production app?</summary><div class="faq-body">A concept sprint delivers a clickable prototype and a plan — great for validating an idea or showing investors. A production app (real backend, store release) is a separate, larger engagement that starts with paid discovery.</div></details>
-        <details><summary>How does ongoing support work?</summary><div class="faq-body">Optional monthly plans reserve a fixed block of time for improvements. One active request at a time, a visible queue, and a two-business-day acknowledgment. You can cancel before the next renewal.</div></details>
-        <details><summary>Can I cancel?</summary><div class="faq-body">Yes. Monthly plans are cancellable before the next billing date, and projects have clear booking/handoff milestones. I'll always tell you your next billing date and how offboarding works.</div></details>
+        <details><summary data-i18n="c.faq1.q">Who owns the final website and accounts?</summary><div class="faq-body" data-i18n="c.faq1.a">You do. You own your domain, hosting, and third-party accounts, and you keep the delivered files. Ownership never depends on staying on a support plan.</div></details>
+        <details><summary data-i18n="c.faq2.q">What costs are separate from the project fee?</summary><div class="faq-body" data-i18n="c.faq2.a">Hosting, domain registration, paid fonts or stock assets, software subscriptions, ad spend, and any store/platform fees. These are disclosed and approved before anything is purchased.</div></details>
+        <details><summary data-i18n="c.faq3.q">How long do projects take?</summary><div class="faq-body" data-i18n="c.faq3.a">Indicative windows: a launch page in 2–3 weeks, a small site in 4–6 weeks, a concept sprint in 2–4 weeks — from kickoff and receipt of the materials I need. Dates are confirmed against actual capacity before we book.</div></details>
+        <details><summary data-i18n="c.faq4.q">How do revisions work?</summary><div class="faq-body" data-i18n="c.faq4.a">Each project includes two consolidated revision rounds at agreed milestones. Larger changes or new scope are quoted separately so the timeline and price stay honest.</div></details>
+        <details><summary data-i18n="c.faq5.q">What's the difference between a prototype and a production app?</summary><div class="faq-body" data-i18n="c.faq5.a">A concept sprint delivers a clickable prototype and a plan — great for validating an idea or showing investors. A production app (real backend, store release) is a separate, larger engagement that starts with paid discovery.</div></details>
+        <details><summary data-i18n="c.faq6.q">How does ongoing support work?</summary><div class="faq-body" data-i18n="c.faq6.a">Optional monthly plans reserve a fixed block of time for improvements. One active request at a time, a visible queue, and a two-business-day acknowledgment. You can cancel before the next renewal.</div></details>
+        <details><summary data-i18n="c.faq7.q">Can I cancel?</summary><div class="faq-body" data-i18n="c.faq7.a">Yes. Monthly plans are cancellable before the next billing date, and projects have clear booking/handoff milestones. I'll always tell you your next billing date and how offboarding works.</div></details>
       </div>
     </div></section>
 
     <!-- 9 · Final CTA + add-ons -->
     <section class="section"><div class="wrap">
-      <p class="policy-note" style="margin-bottom:0;">Also available as separate, staged services once a site is live: basic SEO is included in every build; focused SEO, paid-media, and social-content pilots can be scoped individually — no performance or ranking guarantees.</p>
+      <p class="policy-note" style="margin-bottom:0;" data-i18n="c.s9.note">Also available as separate, staged services once a site is live: basic SEO is included in every build; focused SEO, paid-media, and social-content pilots can be scoped individually — no performance or ranking guarantees.</p>
     </div></section>
   </main>
 
   <section class="contact">
-    <div class="big">Build your next digital move.</div>
-    <p style="margin:28px 0 0; color:color-mix(in srgb, var(--paper) 78%, transparent); max-width:48ch;">Tell me about your business and what you're trying to do. I'll reply within two business days.</p>
+    <div class="big" data-i18n="c.cta.big">Build your next digital move.</div>
+    <p style="margin:28px 0 0; color:color-mix(in srgb, var(--paper) 78%, transparent); max-width:48ch;" data-i18n="c.cta.p">Tell me about your business and what you're trying to do. I'll reply within two business days.</p>
     <div class="btn-row">
-      <a class="btn" href="start-project.html" style="background:var(--paper); color:var(--ink); border-color:var(--paper);">Start a project</a>
+      <a class="btn" href="start-project.html" style="background:var(--paper); color:var(--ink); border-color:var(--paper);" data-i18n="c.cta.btn">Start a project</a>
       <a class="mail" href="mailto:dickersoam@gmail.com">dickersoam@gmail.com</a>
     </div>
   </section>
@@ -288,6 +292,7 @@
     <span>© 2026 Aaron Dickerson</span>
     <span>dickersoam@gmail.com · 469-955-8399</span>
   </footer>
-  <script src="js/site.js?v=10"></script>
+  <script src="js/i18n.js?v=1"></script>
+  <script src="js/site.js?v=11"></script>
 </body>
 </html>

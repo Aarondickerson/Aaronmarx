@@ -13,6 +13,9 @@
   var successEl = document.getElementById("formSuccess");
   var submitting = false;
 
+  // Localized copy: returns Spanish when i18n is active, else the English default.
+  function tr(key, en) { return (window.i18nText && window.i18nText(key)) || en; }
+
   // ---- Service prefill from ?service= (user can still change it) ----
   var params = new URLSearchParams(location.search);
   var svc = (params.get("service") || "").toLowerCase();
@@ -38,13 +41,13 @@
 
   // ---- Validation ----
   var RULES = [
-    { id: "name", msg: "Please enter your name." },
-    { id: "email", msg: "Please enter a valid email address.",
+    { id: "name", key: "ferr.name", msg: "Please enter your name." },
+    { id: "email", key: "ferr.email", msg: "Please enter a valid email address.",
       test: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); } },
-    { id: "business", msg: "Tell me the business or project name." },
-    { id: "service", msg: "Pick what you need help with." },
-    { id: "budget", msg: "Choose a budget band (\u201cnot sure\u201d is fine)." },
-    { id: "goal", msg: "A sentence on the goal helps a lot." }
+    { id: "business", key: "ferr.business", msg: "Tell me the business or project name." },
+    { id: "service", key: "ferr.service", msg: "Pick what you need help with." },
+    { id: "budget", key: "ferr.budget", msg: "Choose a budget band (\u201cnot sure\u201d is fine)." },
+    { id: "goal", key: "ferr.goal", msg: "A sentence on the goal helps a lot." }
   ];
 
   function fieldWrap(el) { return el.closest(".field"); }
@@ -71,9 +74,10 @@
     RULES.forEach(function (r) {
       var el = document.getElementById(r.id);
       var v = (el.value || "").trim();
+      var msg = tr(r.key, r.msg);
       clearError(r.id);
-      if (!v) { errors.push(setError(r.id, r.msg)); return; }
-      if (r.test && !r.test(v)) { errors.push(setError(r.id, r.msg)); }
+      if (!v) { errors.push(setError(r.id, msg)); return; }
+      if (r.test && !r.test(v)) { errors.push(setError(r.id, msg)); }
     });
     return errors;
   }
@@ -125,14 +129,14 @@
     // Endpoint not wired yet: be honest, never fake success.
     if (!endpointReady) {
       statusEl.style.color = "var(--accent)";
-      statusEl.textContent = "Form isn't connected to its inbox yet \u2014 email dickersoam@gmail.com for now.";
+      statusEl.textContent = tr("fstat.notready", "Form isn't connected to its inbox yet \u2014 email dickersoam@gmail.com for now.");
       return;
     }
 
     submitting = true;
     submitBtn.disabled = true;
     statusEl.style.color = "var(--muted)";
-    statusEl.textContent = "Sending\u2026";
+    statusEl.textContent = tr("fstat.sending", "Sending\u2026");
     track("inquiry_submitted", serviceSel ? serviceSel.value : "");
 
     fetch(form.action, {
@@ -156,7 +160,7 @@
     function fail() {
       track("inquiry_failed", serviceSel ? serviceSel.value : "");
       statusEl.style.color = "var(--accent)";
-      statusEl.textContent = "Something went wrong sending that. Your answers are still here \u2014 try again, or email dickersoam@gmail.com.";
+      statusEl.textContent = tr("fstat.fail", "Something went wrong sending that. Your answers are still here \u2014 try again, or email dickersoam@gmail.com.");
     }
   });
 })();

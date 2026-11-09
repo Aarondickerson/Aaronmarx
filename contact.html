@@ -7,7 +7,7 @@
   <meta name="description" content="Get in touch with Aaron Dickerson, digital consultant." />
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css?v=10" />
+  <link rel="stylesheet" href="css/site.css?v=11" />
   <link rel="canonical" href="https://aaronmarx.co/contact.html" />
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="website" />
@@ -32,13 +32,17 @@
   <header class="site-head">
     <div class="brand">AaronMarx</div>
     <nav class="head-mid">
-      <a href="index.html">Work</a>
-      <a href="work.html">Index</a>
-      <a href="about.html">Profile</a>
-      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="index.html" data-i18n="nav.work">Work</a>
+      <a href="work.html" data-i18n="nav.index">Index</a>
+      <a href="about.html" data-i18n="nav.profile">Profile</a>
+      <a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="head-right">
-      <a class="head-cta" href="consulting.html">Consulting</a>
+      <a class="head-cta" href="consulting.html" data-i18n="nav.consulting">Consulting</a>
+      <div class="lang-toggle" role="group" aria-label="Language — Idioma">
+        <button type="button" class="lang-opt is-active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-opt" data-lang="es" aria-pressed="false">ES</button>
+      </div>
       <details class="nest">
         <summary aria-label="More options">☰</summary>
         <div class="nest-panel">
@@ -51,26 +55,26 @@
 
   <main>
     <section class="case-head">
-      <span class="eyebrow">Contact</span>
-      <h1 class="display">Say hello.</h1>
-      <p class="lead" style="margin-top:28px;">For roles, project inquiries, or a full commercial portfolio request — I'd be glad to help.</p>
+      <span class="eyebrow" data-i18n="ct.eyebrow">Contact</span>
+      <h1 class="display" data-i18n="ct.h1">Say hello.</h1>
+      <p class="lead" style="margin-top:28px;" data-i18n="ct.lead">For roles, project inquiries, or a full commercial portfolio request — I'd be glad to help.</p>
     </section>
 
     <div class="wrap">
       <div class="profile-grid">
         <div>
-          <h3 class="h3">Direct</h3>
+          <h3 class="h3" data-i18n="ct.direct">Direct</h3>
           <div class="stat-list">
-            <div class="row"><span class="k">Email</span><a class="index-title" style="font-size:18px;" href="mailto:dickersoam@gmail.com">dickersoam@gmail.com</a></div>
-            <div class="row"><span class="k">Phone</span><a href="tel:4699558399">469-955-8399</a></div>
-            <div class="row"><span class="k">Portfolio</span><a href="https://www.aaronmarx.co/" target="_blank" rel="noopener">aaronmarx.co</a></div>
+            <div class="row"><span class="k" data-i18n="ct.k.email">Email</span><a class="index-title" style="font-size:18px;" href="mailto:dickersoam@gmail.com">dickersoam@gmail.com</a></div>
+            <div class="row"><span class="k" data-i18n="ct.k.phone">Phone</span><a href="tel:4699558399">469-955-8399</a></div>
+            <div class="row"><span class="k" data-i18n="ct.k.portfolio">Portfolio</span><a href="https://www.aaronmarx.co/" target="_blank" rel="noopener">aaronmarx.co</a></div>
           </div>
         </div>
         <div>
-          <h3 class="h3">Send a note</h3>
-          <p style="color:var(--ink-soft);">This opens your mail app with the details filled in.</p>
+          <h3 class="h3" data-i18n="ct.note.h3">Send a note</h3>
+          <p style="color:var(--ink-soft);" data-i18n="ct.note.p">This opens your mail app with the details filled in.</p>
           <p style="margin-top:18px;">
-            <a class="tag" style="font-size:16px; padding:12px 20px;" href="mailto:dickersoam@gmail.com?subject=Project%20inquiry&body=Hi%20Aaron%2C%0A%0A">Compose an email →</a>
+            <a class="tag" style="font-size:16px; padding:12px 20px;" href="mailto:dickersoam@gmail.com?subject=Project%20inquiry&body=Hi%20Aaron%2C%0A%0A" data-i18n="ct.note.link">Compose an email →</a>
           </p>
         </div>
       </div>
@@ -78,7 +82,7 @@
   </main>
 
   <section class="contact">
-    <div class="big">Let's build something worth measuring.</div>
+    <div class="big" data-i18n="ct.cta.big">Let's build something worth measuring.</div>
     <div class="row">
       <a class="mail" href="mailto:dickersoam@gmail.com">dickersoam@gmail.com</a>
       <span>469-955-8399</span>
@@ -89,6 +93,7 @@
     <span>© 2026 Aaron Dickerson</span>
     <span>dickersoam@gmail.com · 469-955-8399</span>
   </footer>
-  <script src="js/site.js?v=10"></script>
+  <script src="js/i18n.js?v=1"></script>
+  <script src="js/site.js?v=11"></script>
 </body>
 </html>

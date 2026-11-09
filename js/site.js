@@ -83,6 +83,9 @@
   if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches && window.innerWidth < 520) {
     // keep it, but it'll be small; no special handling needed
   }
+  // Localized copy helper: Spanish when i18n is active, else the English fallback.
+  function L(key, en) { return (window.i18nText && window.i18nText(key)) || en; }
+
   var PREFIX = location.pathname.indexOf("/case-studies/") !== -1 ? "../" : "";
   var DIR = PREFIX + "images/mascot/";
   var POSES = {
@@ -100,29 +103,31 @@
     var h1 = document.querySelector(".display, h1");
     greeting = { pose: "point", text: "Want the story behind <b>" + (h1 ? h1.textContent.trim().split("\n")[0] : "this project") + "</b>? Scroll on." };
   } else if (file.indexOf("consulting") === 0) {
-    greeting = { pose: "point", text: "Thinking about a project? Here's how we'd work together." };
+    greeting = { pose: "point", text: L("buddy.consulting", "Thinking about a project? Here's how we'd work together.") };
   } else if (file.indexOf("work") === 0) {
     greeting = { pose: "arms", text: "Everything I've shipped. Hover a row for a peek." };
   } else if (file.indexOf("about") === 0) {
     greeting = { pose: "wave", text: "Good to meet you — here's my story." };
   } else if (file.indexOf("contact") === 0) {
-    greeting = { pose: "thumbsup", text: "Let's build something. Say hi 👋" };
+    greeting = { pose: "thumbsup", text: L("buddy.contact", "Let's build something. Say hi 👋") };
   } else {
     greeting = { pose: "wave", text: "Hey — I'm <b>Aaron</b> 👋 Welcome in. Drag the reel to explore." };
   }
 
+  // Each tip/click carries an i18n key + English fallback; text is resolved at
+  // display time so switching language mid-session updates the copy immediately.
   var TIPS = [
-    { pose: "think", text: "Built on research, shipped with intent." },
-    { pose: "point", text: "Tap any project — I'll point the way." },
-    { pose: "thumbsup", text: "Dark mode's up top-right if you like it cozy." },
-    { pose: "arms", text: "A decade of product design, honestly told." },
-    { pose: "wave", text: "Flick the reel or open the index up top." }
+    { pose: "think", k: "buddy.tip1", en: "Built on research, shipped with intent." },
+    { pose: "point", k: "buddy.tip2", en: "Tap any project — I'll point the way." },
+    { pose: "thumbsup", k: "buddy.tip3", en: "Dark mode's up top-right if you like it cozy." },
+    { pose: "arms", k: "buddy.tip4", en: "A decade of product design, honestly told." },
+    { pose: "wave", k: "buddy.tip5", en: "Flick the reel or open the index up top." }
   ];
   var CLICKS = [
-    { pose: "thumbsup", text: "That's me. Glad you're here." },
-    { pose: "point", text: "Check the Commerce on Mobile case — it's my favorite one." },
-    { pose: "think", text: "Questions? The contact page is one tap away." },
-    { pose: "wave", text: "Appreciate you clicking around 🙏" }
+    { pose: "thumbsup", k: "buddy.click1", en: "That's me. Glad you're here." },
+    { pose: "point", k: "buddy.click2", en: "Check the Commerce on Mobile case — it's my favorite one." },
+    { pose: "think", k: "buddy.click3", en: "Questions? The contact page is one tap away." },
+    { pose: "wave", k: "buddy.click4", en: "Appreciate you clicking around 🙏" }
   ];
 
   // Preload
@@ -153,7 +158,7 @@
     });
     imgEl.addEventListener("click", function () {
       var c = CLICKS[clickIdx % CLICKS.length]; clickIdx++;
-      react(c.pose, c.text, 4200);
+      react(c.pose, L(c.k, c.en), 4200);
     });
 
     // greet shortly after load
@@ -193,7 +198,7 @@
       // occasional subtle idle shift / tip
       if (Math.random() < 0.45) {
         var t = TIPS[tipIdx % TIPS.length]; tipIdx++;
-        react(t.pose, t.text, 4200);
+        react(t.pose, L(t.k, t.en), 4200);
       } else {
         setPose(Math.random() < 0.5 ? "arms" : "base");
       }
@@ -208,7 +213,7 @@
         var y = window.scrollY;
         var nearBottom = (window.innerHeight + y) >= (document.body.scrollHeight - 160);
         if (nearBottom && Date.now() > busyUntil - 1000) {
-          react("point", "Like what you see? Let's <b>talk</b>.", 4600);
+          react("point", L("buddy.scroll", "Like what you see? Let's <b>talk</b>."), 4600);
         }
         lastY = y;
       }, 220);
@@ -222,7 +227,10 @@
         if (Date.now() < busyUntil) return;
         var label = a.getAttribute("data-title") ||
           (a.querySelector(".index-title, .np-title, .r-title") ? a.querySelector(".index-title, .np-title, .r-title").textContent.trim() : "");
-        react("point", label ? ("Open <b>" + label + "</b> →") : "Take a look →", 2600);
+        var openTxt = window.AD_LANG === "es"
+          ? (label ? ("Abrir <b>" + label + "</b> →") : L("buddy.hover.generic", "Take a look →"))
+          : (label ? ("Open <b>" + label + "</b> →") : "Take a look →");
+        react("point", openTxt, 2600);
       });
     });
   }
