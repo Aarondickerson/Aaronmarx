@@ -272,6 +272,16 @@
     var bizVal = (document.getElementById("c_business").value || "").trim();
     document.getElementById("qSubject").value = "Discovery questionnaire — " + (client || bizVal || "new client");
 
+    // populate the required "goal" field (shared Formspree schema) with the client's main goal
+    var goalEl = document.getElementById("qGoal");
+    var topGoalInput = form.querySelector('[name="top_goal"]');
+    var topGoal = topGoalInput ? (topGoalInput.value || "").trim() : "";
+    if (goalEl) {
+      goalEl.value = topGoal
+        ? "Questionnaire — main goal: " + topGoal
+        : "Discovery questionnaire submitted" + (bizVal ? " (" + bizVal + ")" : "");
+    }
+
     if (!endpointReady) {
       statusEl.style.color = "var(--accent)";
       statusEl.textContent = "Form isn't connected to its inbox yet \u2014 email dickersoam@gmail.com for now.";

@@ -96,6 +96,11 @@
         <input type="hidden" name="_subject" id="qSubject" value="Discovery questionnaire" />
         <input type="hidden" name="form_type" value="discovery_questionnaire" />
         <input type="hidden" name="client" id="qClient" value="" />
+        <!-- The shared Formspree form requires the intake schema (service/budget/goal).
+             These hidden values satisfy that validation so the questionnaire delivers. -->
+        <input type="hidden" name="service" value="Discovery questionnaire" />
+        <input type="hidden" name="budget" value="n/a (questionnaire)" />
+        <input type="hidden" name="goal" id="qGoal" value="Discovery questionnaire submission" />
 
         <p class="form-note">Your answers are used only to scope and discuss your project — never sold or shared. Please don't include passwords, payment details, or confidential files here.</p>
 
@@ -112,6 +117,6 @@
     <span>dickersoam@gmail.com · 469-955-8399</span>
   </footer>
   <script src="js/site.js?v=10"></script>
-  <script src="js/questionnaire.js?v=1"></script>
+  <script src="js/questionnaire.js?v=2"></script>
 </body>
 </html>
